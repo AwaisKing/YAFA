@@ -17,16 +17,23 @@ Testing and header structure was given by `17-BSIT-54` and `17-BSIT-06`.
 ----------
 Usage:
 -
+
 > **ADDING: **
+
 > yafa.exe a < files... > < archive_name >
+
 *ex: yafa.exe a D:\bussiness_cat.jpg D:\extra_text.txt test_archive.yafa*
 
 > **LISTING:**
+
 > yafa.exe l < archive_name >
+
 *ex: yafa.exe l test_archive.yafa*
 
 > **EXTRACTING:** *(WIP)*
+
 > yafa.exe x < archive_name >
+
 *ex: yafa.exe x test_archive.yafa*
 
 ----------
