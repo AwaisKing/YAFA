@@ -69,8 +69,11 @@ int main(int argc, char** argv) {
 
 				int i;
 				for (i = 0; i < argc - 3; i++) {
+					if (getFileSize(argv[i + 2]) < 0) {
+						std::cout << "no file named : " << argv[i + 2] << " (continuing...)" << std::endl;
+						continue;
+					}
 					std::cout << "adding to archive <" << argv[argc - 1] << "> : " << argv[i + 2] << std::endl;
-
 					std::string fileSize = ll_to_hex(getFileSize(argv[i + 2]));
 					std::string flnm = getFileName(argv[i + 2]);
 					std::string fileName = std::string(255 - flnm.length(), '\0') + flnm;
@@ -80,6 +83,7 @@ int main(int argc, char** argv) {
 
 					std::ifstream inFile(argv[i + 2], std::ios::binary);
 
+					// here you can see IF "fileSize" = 0 THEN PUT "\0" (NULL) to archive.
 					if (fileSize == "0000000000") outFile << '\0';
 					else outFile << inFile.rdbuf();
 
@@ -122,6 +126,7 @@ int main(int argc, char** argv) {
 						std::string fileNameRaw = "";
 
 						// BLOCK - BEGIN
+						/* fileSize */
 						char tempChar;
 						int xa = 0;
 						do {
@@ -130,7 +135,7 @@ int main(int argc, char** argv) {
 							xa++;
 						} while (xa <= 10);
 						fileSize = strtoull(fileSizeRaw.c_str(), nullptr, 16);
-						
+						/* fileName */
 						inFile.seekg(totalFileBlockSize + 16);
 						xa = 0;
 						do {
@@ -138,6 +143,8 @@ int main(int argc, char** argv) {
 							fileNameRaw += tempChar;
 							xa++;
 						} while (xa <= 254);
+						// fileSize+1 because if file is null, it'll reserve it as \0 (NULL)
+						// by 1 character to make tool bug-free. :)
 						if (fileSize == 0) totalFileBlockSize += 16 + 255 + fileSize + 1;
 						else totalFileBlockSize += 16 + 255 + fileSize;
 						// BLOCK - END
@@ -222,15 +229,21 @@ int main(int argc, char** argv) {
 						std::ifstream checkfile(fileName, std::ios::binary);
 						if (checkfile.good()) {
 							checkfile.close();
+
 							std::cout << "file \"" << fileName << "\" already exists in current directory, do you want to replace it? y/N ";
 							if (askReplace()) {
 								std::cout << std::endl << "Replacing \"" << fileName << "\"" << std::endl;
+								std::ofstream outFile(fileName, std::ios::binary);
+								outFile << fileContent;
+								outFile.close();
 							}
 						} else {
-							std::cout << std::endl << "Extracting \"" << fileName << "\"" << std::endl;
+							std::cout << "Extracting \"" << fileName << "\"" << std::endl;
+							std::ofstream outFile(fileName, std::ios::binary);
+							outFile << fileContent;
+							outFile.close();
 						}
 						
-
 						inFile.seekg(totalFileBlockSize);
 						totalFileBlockSize -= 6;
 					}
@@ -289,7 +302,7 @@ bool askReplace() {
 			return true;
 		}
 		else if (c == 'n' || c == 'N') {
-			std::cout << c;
+			std::cout << c << std::endl;
 			return false;
 		}
 		else if (c == '\n' || c == '\r') return false;
