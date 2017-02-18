@@ -12,13 +12,13 @@ Testing and header structure was given by `17-BSIT-54` and `17-BSIT-06`.
 
 
 
-> *NOTE: THIS **DOESN'T** DECREASE / COMPRESS FILES! IT DOES **REVERSE**, AS IT IS JUST A TEST TOOL.*
+> **NOTE:** THIS **DOESN'T** DECREASE FILE SIZE OR COMPRESS FILES! IT DOES THE **REVERSE** (INCREASES SIZE), AS IT IS JUST A TEST TOOL.
 
 ----------
 Usage:
 -
 
-> **ADDING: **
+> **ADDING:**
 
 > yafa.exe a < files... > < archive_name >
 
