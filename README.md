@@ -4,7 +4,7 @@
 
 This thing started as a simple idea by students of **Quaid-e-Awam University of Engineering & Technology** *(QUEST)*, 17 batch of IT.
 
-This was the idea of `17-BSIT-06`[^munib], `17-BSIT-54`[^imran], `17-BSIT-28`[^hamza] and `17-BSIT-11`[^mohit], four intelligent students of *17 batch*.
+This was the idea of `17-BSIT-06`, `17-BSIT-54`, `17-BSIT-28` and `17-BSIT-11`, four intelligent students of *17 batch*.
 
 This idea's design was created by `17-BSIT-28` and `17-BSIT-11`.
 
@@ -46,12 +46,10 @@ IDE & Prerequisites
 > ***(SOURCE CODE IS NOT UPLOADED FOR NOW)***
 
 ----------
-[^awais]: Awais *(Me)* [![fb](https://facebook.com/favicon.ico)](http://facebook.com/AwaisKing404) [![ig](https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon.svg/9d8680ab8a3c.svg)](https://instagram.com/AwaisKing) [ ![tw](https://twitter.com/favicon.ico)](https://twitter.com/AwaisKingHacker)
 
-[^hamza]: Hamza [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015) [![ig](https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon.svg/9d8680ab8a3c.svg)](https://instagram.com/hamza_amir07)
 
-[^munib]: Muneeb [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015)
-
-[^imran]: Imran  [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015)
-
-[^mohit]: Mohit
+(**17-BSIT-07**) Awais *(Me)* [![fb](https://facebook.com/favicon.ico)](http://facebook.com/AwaisKing404) [![ig](https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon.svg/9d8680ab8a3c.svg)](https://instagram.com/AwaisKing) [ ![tw](https://twitter.com/favicon.ico)](https://twitter.com/AwaisKingHacker)
+(**17-BSIT-54**) Imran  [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015)
+(**17-BSIT-28**) Hamza [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015) [![ig](https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon.svg/9d8680ab8a3c.svg)](https://instagram.com/hamza_amir07)
+(**17-BSIT-06**) Muneeb [![fb](https://facebook.com/favicon.ico)](http://facebook.com/prince.hamza.5015)
+(**17-BSIT-11**) Mohit
