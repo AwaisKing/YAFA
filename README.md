@@ -43,7 +43,7 @@ Header Structure:
 IDE & Prerequisites
 -
 > **Visual Studio 2015 - Community**
-> ***(SOURCE CODE IS NOT UPLOADED FOR NOW)***
+> ***(SOURCE CODE IS NOW AVAILABLE)***
 
 ----------
 
