@@ -30,7 +30,7 @@ Usage:
 
 *ex: yafa.exe l test_archive.yafa*
 
-> **EXTRACTING:** *(WIP)*
+> **EXTRACTING:** **(Works but might have some problems...)**
 
 > yafa.exe x < archive_name >
 
